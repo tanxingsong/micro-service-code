@@ -29,7 +29,7 @@ public class MyCasRealm extends CasRealm {
         AuthenticationInfo authc = super.doGetAuthenticationInfo(token);
         // 获得用户名
         String username = (String) authc.getPrincipals().getPrimaryPrincipal();
-        // TODO:获得用户信息
+        // TODO:这里应该从数据库中获取用户信息
 
         return authc;
     }
@@ -43,7 +43,7 @@ public class MyCasRealm extends CasRealm {
         log.info("进入了权限认证");
         Object username = principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        // 创建权限
+        // TODO: 这里应该从数据库获取用户权限
         Set<String> permission = new HashSet<>();
         permission.add("sys:dept:list");
         info.setStringPermissions(permission);
