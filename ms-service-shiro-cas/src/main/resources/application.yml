@@ -1,0 +1,32 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 40301
+  connection-timeout: 5000ms
+  servlet:
+    context-path: /shiro
+    session:
+      cookie:
+        http-only: true
+
+spring:
+  application:
+    name: service-auth
+
+# shiro - cas 配置
+shiro:
+  # 在访问cas服务器登录之后，会返回一个ticket。由该地址接收
+  casFilterUrlPattern: /shiro-cas
+  # cas服务前缀
+  casServerUrlPrefix: http://127.0.0.1:8181/cas
+  # shiro服务前缀
+  shiroServerUrlPrefix: http://127.0.0.1:${server.port}${server.servlet.context-path}
+  # 登录地址
+  loginUrl: ${shiro.casServerUrlPrefix}/login?service=${shiro.shiroServerUrlPrefix}${shiro.casFilterUrlPattern}
+  # 登出地址
+  logoutUrl: ${shiro.casServerUrlPrefix}/logout?service=${shiro.shiroServerUrlPrefix}${shiro.casFilterUrlPattern}
+
+
