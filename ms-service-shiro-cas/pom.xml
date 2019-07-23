@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>framework.parent</artifactId>
+        <artifactId>framework-parent</artifactId>
         <groupId>com.ttcode</groupId>
         <version>1.0</version>
         <relativePath>../ms-framework-parent/pom.xml</relativePath>
@@ -55,6 +55,7 @@
             </releases>
         </repository>
     </repositories>
+
     <build>
         <plugins>
             <plugin>

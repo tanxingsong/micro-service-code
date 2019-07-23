@@ -5,6 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>../ms-service-shiro-cas</module>
+        <module>../ms-govern-gateway</module>
+        <module>../ms-govern-center</module>
     </modules>
 
     <parent>
@@ -15,7 +17,7 @@
 
 
     <groupId>com.ttcode</groupId>
-    <artifactId>framework.parent</artifactId>
+    <artifactId>framework-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
 
@@ -106,5 +108,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <!-- 阿里云maven仓库 -->
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 </project>
