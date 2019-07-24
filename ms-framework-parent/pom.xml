@@ -7,6 +7,7 @@
         <module>../ms-service-shiro-cas</module>
         <module>../ms-govern-gateway</module>
         <module>../ms-govern-center</module>
+        <module>../ms-govern-eureka</module>
     </modules>
 
     <parent>

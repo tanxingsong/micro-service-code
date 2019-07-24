@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: manage-center #eureka 服务
+  profiles:
+    active: dev # 读取哪个配置文件
