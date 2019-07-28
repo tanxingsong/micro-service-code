@@ -8,6 +8,7 @@
         <module>../ms-govern-gateway</module>
         <module>../ms-govern-eureka</module>
         <module>../ms-service-demo</module>
+        <module>../ms-govern-config</module>
     </modules>
 
     <parent>
