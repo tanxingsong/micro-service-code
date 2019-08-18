@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:50101/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: service-provider
+spring:
+  application:
+    name: service-provider
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: govern-config
+      fail-fast: true
+      # 使用application-tt.yml 配置文件
+      profile: tt

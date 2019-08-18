@@ -9,6 +9,7 @@
         <module>../ms-govern-eureka</module>
         <module>../ms-service-demo</module>
         <module>../ms-govern-config</module>
+        <module>../ms-service-provider</module>
     </modules>
 
     <parent>
